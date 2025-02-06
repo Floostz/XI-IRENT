@@ -1,0 +1,53 @@
+.containerProduct {
+    background-image: url('/src/assets/bg produk.png');
+    background-size: 100% 100%; /* Stretch the image to fit the container */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  .container img {
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    width: 100%;
+    height: 100%;
+  }
+.backgroundImageProduct {
+  position: absolute;
+  top: 56%;
+  left: 52%;
+  width: 850px;
+  height: 1000px;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+.mainContentProduct {
+  padding: 20px;
+  z-index: 1;
+}
+
+.Wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+}
+.slider{
+  .carousel-container {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    gap: 16px;
+    position: absolute;
+    top: 51vh;
+    padding: 20px;
+    background: #f4f4f4;
+  }
+}

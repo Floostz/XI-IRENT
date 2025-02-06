@@ -1,0 +1,32 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  left: 0px;
+  bottom: 680px;
+}
+
+.carouselInner {
+  display: inline-block;
+  animation: scroll 10s linear infinite;
+}
+
+.carouselItem {
+  display: inline-block;
+  margin-right: 0px;
+}
+
+.carouselItem img {
+  width: 500px;
+  height: auto;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
