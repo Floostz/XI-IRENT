@@ -2,10 +2,13 @@ import { lazy } from 'solid-js';
 import type { RouteDefinition } from '@solidjs/router';
 
 import Home from './pages/home';
-import AboutData from './pages/about.data';
 import Login from './users/Login';
 
 export const routes: RouteDefinition[] = [
+  {
+    path: '/',
+    component: lazy(() => import('./users/landingpage')),
+  },
   {
     path: '/w',
     component: Home,
@@ -15,24 +18,23 @@ export const routes: RouteDefinition[] = [
     component: Login,
   },
   {
-    path: '**',
-    component: lazy(() => import('./errors/404')),
-  },
-  
-  {
-    path: '/landing',
-    component: lazy(() => import('./users/landingpage')),
-  },
-  {
     path: '/price',
     component: lazy(() => import('./users/Pricelist')),
   },
   {
-   path: '/product',
-   component: lazy(() => import('./users/product') )
+    path: '/product',
+    component: lazy(() => import('./users/product')),
+  },
+  {
+    path: '/product/:id', // Dynamic route for individual product pages
+    component: lazy(() => import('./users/component/product/ProductDetail')),
   },
   {
     path: '/produk',
-    component: lazy(() => import('./porduct') )
-   },
+    component: lazy(() => import('./porduct')),
+  },
+  {
+    path: '**',
+    component: lazy(() => import('./errors/404')),
+  },
 ];

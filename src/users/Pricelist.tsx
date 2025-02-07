@@ -22,18 +22,22 @@ const App: Component = () => {
             <h2>
               You able to eat, drink and smoke
             </h2>
+            <h3>
+            Play single or multiplayer
+            </h3>
           </div>
         </div>
 
         <div class={styles.chose1}>
           <h2>PLAYSTATION :</h2>
           <p>available ps 3 4 and 5, please choose your seat</p>
-          <button class={styles.chooseButton}>Choose</button> {/* Button added here */}
+          <button class={styles.chooseButton}>SELECT</button> {/* Button added here */}
         </div>
         <div class={styles.chose2}>
           <h2>WARNET :</h2>
-          <button class={styles.chooseButton2}>Choose</button> {/* Button added here */}
+  
           <p>VIP and non-VIP available with different specifications choose your seat</p>
+          <button class={styles.chooseButton2}>SELECT</button> {/* Button added here */}
         </div>
       </main>
     </div>

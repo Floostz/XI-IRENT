@@ -1,4 +1,5 @@
 import { createSignal, For, onMount } from 'solid-js';
+import { useNavigate } from '@solidjs/router';
 import Flickity from 'flickity';
 import 'flickity/dist/flickity.min.css';
 import styles from './ProductCarousel.module.css';
@@ -11,38 +12,18 @@ type Product = {
 };
 
 const ProductCarousel = () => {
+  const navigate = useNavigate(); // Router navigation function
+
   const products: Product[] = [
-    { 
-      id: 1, 
-      image: 'src/assets/razerviper.png', 
-      name: 'Razer Cobra Pro Mouse', 
-      price: '$92.13' 
-    },
-    { 
-        id: 1, 
-        image: 'src/assets/razerviper.png', 
-        name: 'Razer Cobra Pro Mouse', 
-        price: '$92.13' 
-      },
-      { 
-        id: 1, 
-        image: 'src/assets/razerviper.png', 
-        name: 'Razer Cobra Pro Mouse', 
-        price: '$92.13' 
-      },
-      { 
-        id: 1, 
-        image: 'src/assets/razerviper.png', 
-        name: 'Razer Cobra Pro Mouse', 
-        price: '$92.13' 
-      },
-      { 
-        id: 2, 
-        image: 'src/assets/razerviper.png', 
-        name: 'Razer Cobra Pro Mouse', 
-        price: '$92.13' 
-      },
-    // Add more products as needed
+    { id: 1, image: 'src/assets/razerviper.png', name: 'Razer Cobra Pro Mouse', price: '$92.13' },
+    { id: 2, image: 'src/assets/image/headset.png', name: 'Gaming Headset', price: '$59.99' },
+    { id: 4, image: 'src/assets/image/stering.png', name: 'Gaming Steering Wheel', price: '$199.99' },
+    { id: 5, image: 'src/assets/image/stering.png', name: 'Gaming Steering Wheel', price: '$199.99' },
+    { id: 6, image: 'src/assets/image/stering.png', name: 'Gaming Steering Wheel', price: '$199.99' },
+    { id: 7, image: 'src/assets/image/stering.png', name: 'Gaming Steering Wheel', price: '$199.99' },
+    { id: 8, image: 'src/assets/image/stering.png', name: 'Gaming Steering Wheel', price: '$199.99' },
+    { id: 9, image: 'src/assets/image/stering.png', name: 'Gaming Steering Wheel', price: '$199.99' },
+    { id: 10, image: 'src/assets/image/stering.png', name: 'Gaming Steering Wheel', price: '$199.99' },
   ];
 
   let carouselRef: HTMLDivElement;
@@ -59,6 +40,10 @@ const ProductCarousel = () => {
     });
   });
 
+  const handleProductClick = (id: number) => {
+    navigate(`/product/${id}`); // Navigate to product detail page
+  };
+
   return (
     <div>
       <div 
@@ -67,7 +52,10 @@ const ProductCarousel = () => {
       >
         <For each={products}>
           {(product) => (
-            <div class={styles.productCard}>
+            <div 
+              class={styles.productCard} 
+              onClick={() => handleProductClick(product.id)} // Click handler
+            >
               <div class={styles.productImageContainer}>
                 <img 
                   src={product.image} 

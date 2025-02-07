@@ -10,9 +10,9 @@
 }
 
 @font-face {
-  font-family: 'P2start';
+  font-family: 'PopBold';
   src: url('path/to/P2.woff2') format('woff2'),
-       url('/src/assets/fonts/PressStart2P-Regular.ttf') format('woff');
+       url('/src/assets/fonts/Poppins-ExtraBold.ttf') format('woff');
 }
 
 .container {
@@ -32,9 +32,9 @@
 /* Background Image Animation */
 .backgroundImageBlackOps {
   position: absolute;
-  top: 15%;
-  left: 34%;
-  width: 850px;
+  top: 8%;
+  left: 30%;
+  width: 900px;
   height: 1000px;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -103,7 +103,9 @@
 
 /* Hero Section */
 .heroTextBlackOps h1,
-.heroTextBlackOps h2 {
+.heroTextBlackOps h2,
+.heroTextBlackOps h3 {
+
   opacity: 0;
   animation: fadeIn 0.8s ease-in forwards;
   animation-delay: 0.5s;
@@ -111,15 +113,15 @@
 
 .heroTextBlackOps h1 {
   position: absolute;
-  width: 311px;
-  height: 169px;
+  width: 60px;
+  line-break:auto;
   left: 240px;
   top: 191px;
   font-family: 'pop';
   font-style: normal;
   font-weight: 700;
-  font-size: 57px;
-  line-height: 69px;
+  font-size: 61px;
+  line-height: 70px;
   /* display: flex
 ; */
   align-items: center;
@@ -128,14 +130,14 @@
 
 .heroTextBlackOps h2 {
   position: absolute;
-  width: 300px;
+  width: 400px;
   height: 150px;
   left: 140vh;
   top: 258px;
-  font-family: 'Poppins';
+  font-family: 'PopBold';
   font-style: normal;
   font-weight: 700;
-  font-size: 70px;
+  font-size: 50px;
   line-height: 63px;
   display: flex;
   align-items: center;
@@ -269,7 +271,6 @@
     text-align: center;
   }
 }
-
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem 2rem;
@@ -286,4 +287,19 @@ body {
   overflow: hidden; /* Prevents scrolling */
   margin: 0;
   padding: 0;
+}
+.heroTextBlackOps h3 {
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  left: 140vh;
+  top: 450px;
+  font-family: 'PopBold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 63px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
 }

@@ -23,7 +23,7 @@ const Navbar: Component = () => {
     </div>
       
       <div class={styles.navLinks}>
-        <A href="/landing" class={location.pathname === "/landing" ? styles.active : ""}>Home</A>
+        <A href="/" class={location.pathname === "/" ? styles.active : ""}>Home</A>
         <A href="/price" class={location.pathname === "/price" ? styles.active : ""}>Pricelist</A>
         <A href="/product" class={location.pathname === "/product" ? styles.active : ""}>Product</A>
         <A href="/contact" class={location.pathname === "/contact" ? styles.active : ""}>Contact</A>

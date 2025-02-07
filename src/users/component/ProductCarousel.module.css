@@ -1,69 +1,74 @@
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('path/to/montserrat-subradaya.woff2') format('woff2'),
+       url('/src/assets/fonts//Montserrat-Bold.ttf') format('woff');
+}
+
+
 .carouselContainer {
   width: 100%;
   overflow: hidden;
   top: 400px;
-
 }
 
 .productCard {
-  width: 500px;
+  width: 350px;
+  height: 500px;
   background-color: rgb(236, 232, 232);
-  border-radius: 10px;
- padding-top: 10px;
- padding-left: 25px;
- height: 490px;
- padding-right: 10px;
-  margin-left: 20px;
-  box-shadow: 0 4px 6px rgb(255, 254, 254);
-  overflow: hidden;
+  border-radius: 12px;
+  padding: 15px;
 
+  margin-left: 20px;
+
+  overflow: hidden;
+  text-align: center;
+  border: 2px solid #d9d9d9;
 }
 
 .productImageContainer {
   position: relative;
-  width: 100%;
-  padding-left: 20px;
-  height: 10px;
+  width: 300px;
   display: flex;
   justify-content: center;
+  height: 300px;
   align-items: center;
-  background-color: #f0f0f000;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 10px;
+  box-shadow: -9px 2px 44px -7px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -9px 2px 44px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: -9px 2px 44px -7px rgba(0,0,0,0.75);
 }
 
 .productImage {
-  
 
-
-  z-index: 1;
-  margin-top: 40vh;
-  margin-left: -35px;
- 
-}
-
-.productImageOverlay {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  right: 0;
-  height: 20px;
-
+  height: 250px;
+  width: 300px;
+  display: block;
 }
 
 .productInfo {
-  padding: 15px;
+  padding-top: 15px;
   text-align: center;
 }
 
 .productName {
   margin: 0;
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 5px;
+  margin-left: 5px;
+  font-size: 30px;
+  color: #003366;
+  text-align: left;
+  font-family: 'Montserrat Bold';
+  width: 300px;
+  font-weight: bold;
 }
 
 .productPrice {
-  margin: 0;
-  font-size: 20px;
+  margin-top: 2px;
+  font-family: 'Montserrat Bold';
+  margin-left: -140px;
+  font-size: 34px;
   font-weight: bold;
-  color: #000;
+  color: #003366;
 }

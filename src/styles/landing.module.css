@@ -191,7 +191,8 @@ html, body {
 .heroText h1 {
   font-family: 'pop', sans-serif;
   margin-left: 37px;
-  font-size: 5.9rem;
+  font-size: 5.2rem;
+  width: 700px;
   margin-bottom: 2rem;
   line-height: 1.1;
 
@@ -241,9 +242,9 @@ html, body {
   border-radius: 10px;
   z-index: 1;
   padding-bottom: 1px;
-  width: 842px;
+  width: 1000px;
   height: 150px;  
-  left: 150px;
+  left: 200px;
   top: 855px;
   position: absolute;
   color: rgb(0, 0, 0);
