@@ -6,7 +6,7 @@ const App: Component = () => {
   return (
     <div class={styles.container}>
       <img
-        src="src/assets/fonts/classic_ghost_from_call_of_duty_by_pavseh_de3sfi6 1.png"
+        src="images\classic_ghost_from_call_of_duty_by_pavseh_de3sfi6 1.png"
         alt="Call of Duty Ghost"
         class={styles.backgroundImageBlackOps}
       />

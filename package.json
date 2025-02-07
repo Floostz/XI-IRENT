@@ -6,6 +6,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
+     "postinstall": "pnpm install --no-frozen-lockfile",
     "build": "vite build",
     "serve": "vite preview"
   },
