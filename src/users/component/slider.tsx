@@ -60,6 +60,7 @@ const ProductCarousel = () => {
                 <img 
                   src={product.image} 
                   alt={product.name} 
+                  loading="lazy"
                   class={styles.productImage} 
                 />
                 <div class={styles.productImageOverlay}></div>

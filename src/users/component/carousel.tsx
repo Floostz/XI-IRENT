@@ -19,7 +19,6 @@ const Carousel = () => {
     'src/assets/efootballs.png',
     'src/assets/cod.png',
     'src/assets/blackmyth.png',
-
   ];
 
   onMount(() => {
@@ -33,13 +32,12 @@ const Carousel = () => {
       <div class={styles.carouselInner}>
         {images.map((img, index) => (
           <div class={styles.carouselItem} key={index}>
-            <img src={img} alt={`Image ${index + 1}`} />
+            <img src={img} alt={`Image ${index + 1}`} loading="lazy" />
           </div>
         ))}
       </div>
     </div>
   );
 };
-
 
 export default Carousel;

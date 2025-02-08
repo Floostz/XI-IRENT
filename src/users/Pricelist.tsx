@@ -8,6 +8,7 @@ const App: Component = () => {
       <img
         src="images\classic_ghost_from_call_of_duty_by_pavseh_de3sfi6 1.png"
         alt="Call of Duty Ghost"
+        loading="lazy"
         class={styles.backgroundImageBlackOps}
       />
 

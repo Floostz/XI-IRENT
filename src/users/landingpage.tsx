@@ -11,6 +11,7 @@ const App: Component = () => {
       <img
         src="src/assets/fonts/sun_wukong__black_myth__render_by_eternalashen_di47cip 1.png"
         alt="Sun Wukong Render"
+        loading="lazy"
         class={styles.backgroundImageWukong}
       />
 

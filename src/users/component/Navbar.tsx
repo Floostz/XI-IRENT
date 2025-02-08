@@ -18,7 +18,8 @@ const Navbar: Component = () => {
           />
         </div>
       ) : (
-        <img src="src/assets/fonts/logo1.png" alt="XIIRENT" />
+        <img src="src/assets/fonts/logo1.png" alt="XIIRENT" 
+        loading="lazy" />
       )}
     </div>
       
