@@ -1,6 +1,12 @@
+@font-face {
+  font-family: 'pop';
+  src: url('path/to/montserrat-subradaya.woff2') format('woff2'),
+       url('/src/assets/fonts//Poppins-Bold.ttf') format('woff');
+}
+
 .containerProduct {
     background-image: url('/src/assets/image/PRODUCT.png');
-    background-size: 100% 100%; /* Stretch the image to fit the container */
+    background-size: 100% 1060px; /* Stretch the image to fit the container */
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -39,15 +45,25 @@
   position: relative;
   margin-top: 20px;
 }
-.slider{
-  .carousel-container {
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    gap: 16px;
-    position: absolute;
-    top: 51vh;
-    padding: 20px;
-    background: #f4f4f4;
-  }
+
+
+.backgroundImageProduct h1 {
+  font-size: 37px;
+  z-index: 2;
+  position: absolute;
+  right: 480px;
+  bottom: 940px;
+  line-height: 20px;
+  width: 1000px;
+  font-family: 'pop';
+}
+.slider h1 {
+  font-size: 37px;
+  z-index: 2;
+  position: absolute;
+  right: 1050px;
+  bottom: 565px;
+  line-height: 20px;
+  width: 1000px;
+  font-family: 'pop';
 }

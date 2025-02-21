@@ -1,0 +1,122 @@
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 80rem;
+    height: 600px;
+    margin-bottom: -140px;
+    background-color: white;
+    border-radius: 0.5rem;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .inputIcon {
+    position: absolute;
+    left: 130px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .leftSection {
+    width: 50%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+  
+  .logoImage {
+    margin-bottom: 100px;
+  }
+  
+  .rightSection {
+    width: 65%;
+    background-color: #13465C;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    border: 20px;
+    justify-content: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  
+  .welcome {
+    font-size: 29px;
+    font-weight: 700;
+    color: white;
+    margin-left: 100px;
+    margin-bottom: 1.95rem;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Reduced gap to accommodate more fields */
+  }
+  
+  .inputContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.5rem; /* Reduced margin to accommodate more fields */
+  }
+  
+  .input {
+    padding-left: 40px !important;
+    width: 70%;
+    margin-left: 110px;
+    padding: 0.75rem 1rem;
+    border-radius: 15px;
+    background-color: #ffff;
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #3B82F6;
+  }
+  
+  .loginButton {
+    width: 45%;
+    padding: 0.75rem 1rem;
+    background-color: #980E10;
+    color: white;
+    margin-left: 150px;
+    border-radius: 15vh;
+    transition: background-color 0.2s;
+    margin-top: 1rem; /* Added margin-top for better spacing */
+  }
+  
+  .loginButton:hover {
+    background-color: #6B0000;
+  }
+  
+  .links {
+    margin-bottom: -10px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    margin-left: 150px;
+    flex-direction: column;
+    gap: 0.05rem;
+  }
+  
+  .link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    color: white;
+  }

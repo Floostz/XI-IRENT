@@ -4,7 +4,7 @@
   white-space: nowrap;
   position: absolute;
   left: 0px;
-  bottom: 680px;
+  bottom: 610px;
 }
 
 .carouselInner {
@@ -18,8 +18,9 @@
 }
 
 .carouselItem img {
-  width: 500px;
+  width: 550px;
   height: auto;
+
 }
 
 @keyframes scroll {

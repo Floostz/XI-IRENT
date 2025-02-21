@@ -1,9 +1,21 @@
-import { Component } from 'solid-js';
+import { Component, onMount } from 'solid-js';
+import { useNavigate } from '@solidjs/router';
 import Navbar from './component/Navbar';
 import styles from '../styles/landing.module.css';
+import Swal from 'sweetalert2';
+
 
 const App: Component = () => {
-  return ( 
+  const navigate = useNavigate();
+
+  onMount(() => {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (!isLoggedIn) {
+
+    }
+  });
+
+  return (
     <div class={styles.container}>
       <Navbar />
 

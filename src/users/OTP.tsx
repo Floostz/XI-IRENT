@@ -1,10 +1,10 @@
 import { Component } from 'solid-js';
-import LoginComponent from './component/logincomponent'
+import OtpComponent from './component/otp'
 import robotImage from './../assets/astroboy.png';
 import backgroundImage from '../assets/fonts/background login.png';
 import style from '../users/Login.module.css'
 
-const Login: Component = () => {
+const Otp: Component = () => {
   return (
     <div 
       class="fixed inset-0 w-full h-full bg-cover bg-center" 
@@ -21,11 +21,11 @@ const Login: Component = () => {
           />
         <div class="relative w-full h-full flex items-center justify-center">
       
-          <LoginComponent/>
+          <OtpComponent/>
         </div>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Otp;

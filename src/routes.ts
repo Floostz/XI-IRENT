@@ -6,11 +6,23 @@ import Login from './users/Login';
 
 export const routes: RouteDefinition[] = [
   {
-    path: '/',
+    path: '/landing',
     component: lazy(() => import('./users/landingpage')),
   },
   {
-    path: '/w',
+    path: '/new-password',
+    component: lazy(() => import('./users/Password')),
+  },
+  {
+    path: '/reset',
+    component: lazy(() => import('./users/Forget')),
+  },
+  {
+    path: '/otp',
+    component: lazy(() => import('./users/OTP')),
+  },
+  {
+    path: '/',
     component: Home,
   },
   {
@@ -27,14 +39,23 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: '/product/:id', // Dynamic route for individual product pages
-    component: lazy(() => import('./users/component/product/ProductDetail')),
+    component: lazy(() => import('./users/component/product/Television')),
+  },
+
+  {
+    path: '/warnet',
+    component: lazy(() => import('./users/booking/bookingwarnet')),
   },
   {
-    path: '/produk',
-    component: lazy(() => import('./porduct')),
+    path: '/register',
+    component: lazy(() => import('./users/Register')),
   },
   {
     path: '**',
     component: lazy(() => import('./errors/404')),
+  },
+  {
+    path: '/admin',
+    component: lazy(() => import('./admin/homeadmin')),
   },
 ];

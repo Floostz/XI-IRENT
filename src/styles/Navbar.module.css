@@ -1,14 +1,15 @@
 .navbar {
   display: flex;
- 
+  z-index: 10;
   padding: 1.5rem 4rem;
 }
 
 .logo {
   position: absolute;
-  top: -15px;
+  top: -20px;
   margin-bottom: 0;
-  margin-left: -35px;
+  margin-left: -45px;
+
  
 }
 
@@ -18,14 +19,14 @@
   display: flex;
   line-height: 55px;
   margin-left: 850px;
-  font-size: 80px;
+  font-size: 100px;
 
 }
 
 .navLinks a {
   color: #ffffff5c;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   position: relative;
   font-family: 'Montserrat Bold', sans-serif;
   margin-bottom: 100px;
@@ -35,19 +36,21 @@
   padding: 5px 45px;
   border-radius: 50px;
   border: 3.5px solid hsl(0, 0%, 100%);
-  width:400px;
+  width:600px;
+  height: 50px;
   background-color: transparent;
 }
 .searchIcon {
   position: absolute;
   left: 20px;
   width: 20px;
-  height: 20px;
+  height: 50px;
 }
 .searchContainer {
   position: absolute;
-  left: 50px;
-  top: 50px;
+  left: 10px;
+  top: 42px;
+  width: 200px;
 }
 .navLinks a::after {
   content: ''; 
@@ -63,11 +66,7 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   box-shadow: 0 0 10px rgba(2, 169, 247, 0.8);
 }
-.searchContainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
+
 .navLinks a:hover:not(.active)::after {
   opacity: 1;
   transform: translateX(-50%) scale(1.2);
@@ -101,7 +100,7 @@
 }
 
 .loginButton:hover {
-  background-color: #2fbeb8;
+  background-color: #00000081;
 }
 
 .buttonGroup {
@@ -115,16 +114,12 @@
 @media (max-width: 768px) {
   
   .navbar {
-    flex-direction: column;
-    padding: 1.5rem;
+
+    padding: 2rem;
+
   }
 
-  .logo {
-    margin-left: 200px;
-    margin-top: 500vh;
-  }
-
-
+ 
 
   .navLinks {
     display: flex;

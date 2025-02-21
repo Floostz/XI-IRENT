@@ -1,0 +1,740 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f7f8fa;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+.body, html{
+
+  overflow: hidden;
+}
+/* Sidebar */
+.sidebar {
+  width: 70px;
+
+  background-color: #083549;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  overflow: hidden !important;
+  -ms-overflow-style: none;  /* IE/Edge */
+}
+
+.logoWrapper {
+  margin-bottom: 30px;
+
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #083549;
+  font-size: 20px;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+  
+}
+.sidebarNav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.sidebarNav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.navItem[title]:hover::after,
+.navItemActive[title]:hover::after,
+.bottomNav li[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  z-index: 1000;
+  /* Position it outside without causing scrollbars */
+  margin-left: 10px;
+  pointer-events: none;
+}
+
+.navItem:hover svg,
+.navItemActive:hover svg,
+.bottomNav li:hover svg {
+  overflow: hidden !important;
+  transform: none !important;
+}
+.navItem {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.navItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  overflow: hidden;
+}
+
+.navItemActive {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.bottomNav {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.headerTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 250px;
+}
+
+.searchBar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-left: 8px;
+  font-size: 14px;
+  width: 100%;
+  color: #4b5563;
+}
+
+.headerIcons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarContainer {
+  width: 50px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  fill: #fdfdfd; /* Warna baru */
+  outline:transparent;
+}
+
+.avatar img {
+  width: 1000px;
+  filter: invert(1); /* Ubah warna logo (contoh: putih ke hitam) */
+  fill: #3498db; /* Warna baru */
+  height: 100%;
+  padding-bottom: 60px;
+  object-fit: cover;
+}
+
+/* Dashboard Content */
+.dashboardContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 25px;
+}
+
+/* Stats Cards */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.statCard {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 130px;
+}
+
+.statInfo h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  margin: 0 0 10px 0;
+}
+
+.statCount {
+  font-size: 32px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.avatarRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatarStacked {
+  display: flex;
+  align-items: center;
+}
+
+.stackedImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  margin-left: -10px;
+}
+
+.stackedImg:first-child {
+  margin-left: 0;
+}
+
+.stackedImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stackedMore {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-weight: 500;
+  margin-left: -10px;
+}
+
+.moreButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+/* Charts */
+.chartsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.chartCard {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chartHeader h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.chartActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdownButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  color: #4b5563;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Bar Charts */
+.barChart {
+  display: flex;
+  align-items: flex-end;
+  height: 240px;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.chartColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barContainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bar {
+  width: 20px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  position: relative;
+  transition: height 0.3s ease;
+}
+
+.activeBar {
+  background-color: #10b981;
+}
+
+.starRating {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #10b981;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.barLabel {
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* Call Chart */
+.callChart {
+  display: flex;
+  align-items: flex-end;
+  height: 240px;
+  gap: 20px;
+  position: relative;
+}
+
+.callColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.callBarContainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.callBarBg {
+  width: 20px;
+  height: 100%;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+}
+
+.callBar {
+  width: 20px;
+  background-color: #8b5cf6;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  transition: height 0.3s ease;
+}
+
+.callLegend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendColor {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #8b5cf6;
+}
+
+.legendText {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.legendPercentage {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Table */
+.tableSection {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tableHeader h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.tableActions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.tableSearch {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 6px 10px;
+  width: 200px;
+}
+
+.tableSearch input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-left: 8px;
+  font-size: 14px;
+  width: 100%;
+  color: #4b5563;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 8px;
+  color: #4b5563;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataTable th {
+  text-align: left;
+  padding: 15px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: capitalize;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dataTable td {
+  padding: 15px 10px;
+  font-size: 14px;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.statusInProgress {
+  background-color: #ede9fe;
+  color: #6d28d9;
+}
+
+.statusClosed {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.statusOnHold {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .statsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .chartsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+  
+  .header {
+    flex-direction: column;
+    padding: 15px;
+    height: auto;
+    gap: 15px;
+  }
+  
+  .headerActions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .searchBar {
+    width: 200px;
+  }
+  
+  .tableSearch {
+    display: none;
+  }
+}
+
+/* Scrollbar Styling */
+.dashboardContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dashboardContent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dashboardContent::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.dashboardContent::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Tooltip for sidebar icons */
+.navItem:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1f2937;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-left: 10px;
+  opacity: 0.9;
+  z-index: 100;
+}
+
+/* Animation for notifications */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.iconButton svg {
+  transition: all 0.2s ease;
+}
+
+.iconButton:hover svg {
+  color: #111827;
+  animation: pulse 1s infinite;
+}
+
+/* Empty state styling */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  color: #9ca3af;
+}
+
+.emptyState svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+  stroke: #d1d5db;
+}
+
+.emptyState p {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.statCard, .chartCard, .tableSection {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.statCard:nth-child(1) { animation-delay: 0.1s; }
+.statCard:nth-child(2) { animation-delay: 0.2s; }
+.statCard:nth-child(3) { animation-delay: 0.3s; }
+.statCard:nth-child(4) { animation-delay: 0.4s; }
+.customLogo {
+  filter: invert(1); /* Ubah warna logo (contoh: putih ke hitam) */
+  fill: #3498db; /* Warna baru */
+  width: 100%;
+  height: 100%;
+  padding-top: 8px;
+  object-fit:cover;
+}

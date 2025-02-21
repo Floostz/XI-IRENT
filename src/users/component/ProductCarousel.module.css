@@ -1,74 +1,179 @@
 @font-face {
-  font-family: 'Montserrat Bold';
-  src: url('path/to/montserrat-subradaya.woff2') format('woff2'),
-       url('/src/assets/fonts//Montserrat-Bold.ttf') format('woff');
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Bold.ttf') format('woff');
+  font-weight: 700;
+  font-display: swap;
 }
 
-
+/* 🎠 Swiper Container */
 .carouselContainer {
   width: 100%;
+  position: relative;
+  padding: 20px 0;
+  top: 430px;
+  height: 600px;
   overflow: hidden;
-  top: 400px;
 }
 
+/* 🔄 Swiper Core */
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+/* 📌 Ensures Swiper displays multiple slides correctly */
+.swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: auto !important; /* Prevent shrinking issues */
+  display: flex;
+  justify-content: center;
+}
+
+/* 🛒 Product Card */
 .productCard {
   width: 350px;
-  height: 500px;
-  background-color: rgb(236, 232, 232);
-  border-radius: 12px;
-  padding: 15px;
-
-  margin-left: 20px;
-
-  overflow: hidden;
+  height: 460px;
+  background-color: #f8f8f8;
+  border-radius: 16px;
+  padding: 20px;
   text-align: center;
-  border: 2px solid #d9d9d9;
+  border: 1px solid #eaeaea;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
 }
 
+.productCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #d0d0d0;
+}
+
+/* 🖼 Product Image */
 .productImageContainer {
   position: relative;
   width: 300px;
+  height: 300px;
   display: flex;
   justify-content: center;
-  height: 300px;
   align-items: center;
-  background-color: rgb(255, 255, 255);
-  padding: 10px;
-  margin-left: 5px;
-  border-radius: 10px;
-  box-shadow: -9px 2px 44px -7px rgba(0,0,0,0.75);
-  -webkit-box-shadow: -9px 2px 44px -7px rgba(0,0,0,0.75);
-  -moz-box-shadow: -9px 2px 44px -7px rgba(0,0,0,0.75);
+  background-color: white;
+  padding: 15px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.productCard:hover .productImageContainer {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .productImage {
-
   height: 250px;
   width: 300px;
-  display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
+.productCard:hover .productImage {
+  transform: scale(1.05);
+}
+
+/* 📜 Product Info */
 .productInfo {
-  padding-top: 15px;
+  padding-top: 20px;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover .productInfo {
+  transform: translateY(-5px);
 }
 
 .productName {
   margin: 0;
-  margin-left: 5px;
-  font-size: 30px;
-  color: #003366;
+  padding: auto;
+  font-size: auto;
+  font-size: 20px;
+  color: #1a1a1a;
   text-align: left;
-  font-family: 'Montserrat Bold';
-  width: 300px;
-  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.productCard:hover .productName {
+  color: #003366;
 }
 
 .productPrice {
-  margin-top: 2px;
-  font-family: 'Montserrat Bold';
-  margin-left: -140px;
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: auto;
   font-size: 34px;
-  font-weight: bold;
+  
+  font-weight: 700;
   color: #003366;
+  display: block;
+  text-align: left;
+  padding: 0 1px;
+  transition: color 0.3s ease;
+}
+
+/* 🎯 Swiper Navigation */
+.swiper-button-prev, 
+.swiper-button-next {
+  color: #003366 !important;
+  width: 40px;
+  height: 40px;
+}
+
+/* 🟢 Responsive Design */
+@media (max-width: 1024px) {
+  .productCard {
+    width: 300px;
+    height: 450px;
+  }
+  
+  .productImageContainer {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .productImage {
+    height: 220px;
+    width: 260px;
+  }
+  
+  .productName {
+    font-size: 20px;
+  }
+  
+  .productPrice {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 100% !important; /* Show one slide at a time */
+  }
+
+  .swiper {
+    padding: 0 10px;
+  }
+  
+  .productCard {
+    width: 100%;
+    height: auto;
+  }
 }

@@ -1,19 +1,18 @@
 import { useParams } from '@solidjs/router';
-import Navbar from '../Navbar'; // Import your navbar
-import styles from './ProductDetail.module.css';
+import Navbar from '../Navbar';
+import styles from './television.module.css';
 
 const ProductDetail = () => {
   const params = useParams();
   const productId = params.id;
 
-  // Sample product data
   const productData = {
     "1": {
       name: "27\" Odyssey G5 G55C QHD 165Hz Curved Gaming Monitor",
       model: "LS27CG552EEXXD",
       price: "$210.77 USD",
       available: true,
-      image: "/src/assets/razerviper.png", // Replace with correct image path
+      image: "/src/assets/televisions.png",
       specifications: {
         resolution: "QHD (2,560 x 1,440)",
         aspectRatio: "16:9",
@@ -29,7 +28,7 @@ const ProductDetail = () => {
 
   return (
     <div class={styles.background}>
-      <Navbar /> {/* Navbar from your component */}
+      <Navbar />
       <div class={styles.productContainer}>
         {product ? (
           <>
@@ -40,18 +39,38 @@ const ProductDetail = () => {
             <div class={styles.productDetails}>
               <h1 class={styles.productTitle}>{product.name}</h1>
               <p class={styles.productModel}>{product.model}</p>
-              <p class={styles.productAvailability}>{product.available ? "Available" : "Out of Stock"}</p>
+              <p class={styles.productAvailability}>
+                {product.available ? "Available" : "Out of Stock"}
+              </p>
               
               <div class={styles.specifications}>
                 <h2>Specifications</h2>
-                <ul>
-                  <li><strong>Resolution:</strong> {product.specifications.resolution}</li>
-                  <li><strong>Aspect Ratio:</strong> {product.specifications.aspectRatio}</li>
-                  <li><strong>Screen Curvature:</strong> {product.specifications.screenCurvature}</li>
-                  <li><strong>Brightness (Typical):</strong> {product.specifications.brightness}</li>
-                  <li><strong>Response Time:</strong> {product.specifications.responseTime}</li>
-                  <li><strong>Refresh Rate:</strong> {product.specifications.refreshRate}</li>
-                </ul>
+                <div class={styles.specsGrid}>
+                  <div class={styles.specItem}>
+                    <h3>Resolution</h3>
+                    <p>{product.specifications.resolution}</p>
+                  </div>
+                  <div class={styles.specItem}>
+                    <h3>Screen Curvature</h3>
+                    <p>{product.specifications.screenCurvature}</p>
+                  </div>
+                  <div class={styles.specItem}>
+                    <h3>Response Time</h3>
+                    <p>{product.specifications.responseTime}</p>
+                  </div>
+                  <div class={styles.specItem}>
+                    <h3>Aspect Ratio</h3>
+                    <p>{product.specifications.aspectRatio}</p>
+                  </div>
+                  <div class={styles.specItem}>
+                    <h3>Brightness (Typical)</h3>
+                    <p>{product.specifications.brightness}</p>
+                  </div>
+                  <div class={styles.specItem}>
+                    <h3>Refresh Rate</h3>
+                    <p>{product.specifications.refreshRate}</p>
+                  </div>
+                </div>
               </div>
 
               <p class={styles.productPrice}>{product.price}</p>
