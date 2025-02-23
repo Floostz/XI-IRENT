@@ -29,7 +29,7 @@ const App: Component = () => {
         <div class={styles.chose1}>
           <h2>PLAYSTATION :</h2>
           <p>Available PS 3, 4, and 5. Please choose your seat.</p>
-          <button class={styles.chooseButton} onClick={() => navigate("/warnet")}>
+          <button class={styles.chooseButton} onClick={() => navigate("/ps")}>
             SELECT
           </button>
         </div>

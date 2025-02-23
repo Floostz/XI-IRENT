@@ -1,0 +1,675 @@
+@font-face {
+    font-family: 'pop';
+    src: url('path/to/montserrat-subradaya.woff2') format('woff2'),
+         url('/src/assets/font/Poppins-Bold.ttf') format('woff');
+  }
+  
+  
+  .container {
+    background-image: url('/src/assets/background.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+  
+    
+    .backgroundImageJude {
+      position: absolute;
+      top: 43%;
+      left: 55%;
+      transform: translate(-50%, -40%);
+      height: 122vh;
+      opacity: 0.6;
+      width: 120vh;
+      z-index: 0;
+    }
+    
+    .mainContent {
+    
+      z-index: 0;
+      left: 133px;
+      padding: 2rem;
+    }
+    
+    .bookingContainer {
+      margin: 0 auto;
+      padding: 2rem;
+      color: white;
+    }
+   
+    .totalSection {
+      margin-top: 32px;
+    }
+    
+    .totalLabel {
+      font-size: 30px;
+      font-weight: bold;
+      color: black;
+    }
+    
+  
+    .nextButton {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: #b71c1c;
+      color: white;
+      border: none;
+      padding: 8px 32px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+  
+    
+    
+    
+    .playstation3, .vipSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-size: 1.2rem;
+      margin-left: -5px;
+      margin-bottom: -2px;
+      font-family: 'pop';
+    }
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      font-family: 'pop';
+    }
+    .booked {
+      background-color: gray !important; /* Warna untuk kursi yang sudah dibooking */
+  
+      pointer-events: none; /* Supaya tidak bisa diklik lagi */
+    }
+    
+    
+    .nonVipGrid, .vipGrid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .row {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    
+    /* Kursi Non-VIP */
+    .seat {
+      width: 70px;
+      height: 70px;
+      z-index: 201;
+      background-color: white;
+      color: black;
+      display: flex;
+      font-family: 'pop';
+      align-items:  center;
+  
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.7rem;
+    }
+    
+    .seat:hover {
+  
+      box-shadow: 0 0 10px rgba(2, 169, 247, 0.5);
+    }
+    
+    .seat.selected {
+      background-color: #B72D2F;
+      border-color: #B72D2F;
+    }
+    
+    /* Warna kursi VIP */
+    .seat.vipSeat {
+    background-color: #415888;
+    }
+    
+    .seat.vipSeat:hover {
+      
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    
+    .seat.vipSeat.selected {
+      background-color: #B72D2F;
+      border-color: #B72D2F;
+    }
+    
+    .legend {
+      line-height: 65px;
+      gap: 1rem;
+      margin-left: 1450px;
+      margin-top: 0px;
+      justify-content: center;
+    }
+    .legend h3 {
+      font-size: 19px;
+      margin-top: 10px;
+        margin-right: 60px;
+    }
+    
+    .legendItem {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+    }
+    
+    .legendBox {
+      width: 40px;
+      height: 40px;
+  
+    }
+    .legendItem span {
+     font-family: 'pop';
+     margin-left: 8px;
+    }
+    
+    
+    .legendBox.selected {
+      background-color: #B72D2F;
+      
+    }
+    
+    .legendBox.normal {
+      background-color: transparent;
+      background-color: white;
+    }
+    
+    .legendBox.vip {
+      background-color: #415888;
+  
+    }
+    
+    @media (max-width: 768px) {
+      .gridContainer {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    
+      .seat {
+        width: 50px;
+        height: 50px;
+        font-size: 0.8rem;
+      }
+    }
+  
+  /* Popup Container */
+  .popup {
+    background: white;
+    padding: 20px;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  /* Popup Container */
+  .popup1 {
+    background: white;
+    padding-bottom: 117px;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute;
+    width: 443px;
+    bottom: 44px;
+    right: 344px;
+    height: 136px;
+    background: #D9D9D9;
+    border-radius: 22px;
+    animation: 0.3sease -in-out;
+  }
+  .popup h2 {
+    font-family: 'pop';
+    font-size: 30px;
+  }
+  .popup2 {
+  
+    position: absolute;
+  width: 606px;
+  height: 559px;
+  left: 417px;
+  top: 232px;
+  
+  background: #D9D9D9;
+  border-radius: 22px;
+  
+  }
+  
+  .popupButtonBack{
+    
+  position: absolute;
+  width: 138px;
+  height: 39px;
+  left: 463px;
+  top: 251px;
+  
+  background: #B72D2F;
+  }
+  
+  
+  /* Popup Buttons */
+  .popupButton {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .popupButton:hover {
+    background: #0056b3;
+  }
+  
+  /* Input Fields */
+  .inputField {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Animasi Popup */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  
+  /* Time selection and promo code inputs */
+  
+  .timeSelect {
+    width: 100%;
+    height: 40px;
+    background: #b71c1c;
+    border: none;
+    color: white;
+    padding: 0 12px;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  .promoInputWrapper {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .promoSection {
+    margin-bottom: 24px;
+  }
+  
+  .timeSelectors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  
+  
+  .promoInput {
+    flex: 1;
+    height: 40px;
+    background: #b71c1c;
+    border: none;
+    color: white;
+    padding: 0 12px;
+  }
+  
+  .promoInput::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .applyButton {
+    background: #b71c1c;
+      color: white;
+      border: none;
+      padding: 0 24px;
+      margin-top: 8px;
+      margin-bottom: 18px;
+      font-weight: bold;
+      cursor: pointer;
+  }
+  
+  
+  /* Promo code input */
+  .promoInput {
+    width: 100%;
+    height: 60px;
+    background: #B72D2F;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  
+  /* Total amount display */
+  
+  
+  /* Navigation buttons container */
+  .popupNavigation {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  
+  
+  /* Hover effects */
+  .backButton:hover,
+  .nextButton:hover {
+    background: #8f2224;
+    transition: background-color 0.3s ease;
+  }
+  
+  .confirmButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .cancelButton {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  
+  .popupConfirm {
+    background-color: #e5e5e5;
+    padding: 65px;
+    border-radius: 15px;
+    text-align: center;
+    width: 580px;
+    height: 350px;
+  }
+  
+  .totalText {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .totalAmount {
+    color: #000000; /* Warna merah */
+    font-weight: bold;
+  }
+  
+  .confirmationText {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+  
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .confirmYesButton {
+    background-color: #b71c1c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .confirmNoButton {
+    background-color: #b71c1c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Update the timePromoPopup styles to match the design */
+  .timePromoPopup {
+    position: relative;
+    width: 500px;
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 24px;
+    max-width: 80vw;  /* Menyesuaikan lebar popup */
+    max-height: 70vh;  /* Menjaga popup agar tidak terlalu tinggi */
+    padding: 20px;
+    overflow: auto;  /* Agar popup scrollable jika konten terlalu besar */
+    box-sizing: border-box;  /* Menjaga padding tidak menambah ukuran */
+  }
+  
+  .backButton {
+    background: #b71c1c;
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Time selection and promo code inputs */
+  
+  .promoInput {
+    width: 100%;
+    height: 48px;
+    background: #b72d2f;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    margin: 10px 0 20px;
+    padding: 0 15px;
+  }
+  
+  /* Total amount display */
+  .totalAmount {
+  
+    font-size: 39px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;  /* Mengatur lebar maksimum */
+    overflow: hidden;  /* Menghindari konten keluar */
+  }
+  .totalAmount3 {
+  
+    font-size: 30px;
+    font-weight: bold;
+  
+    align-items: center;
+    max-width: 100%;  /* Mengatur lebar maksimum */
+    overflow: hidden;  /* Menghindari konten keluar */
+  }
+  .content {
+    margin-top: 40px;
+  }
+  
+  /* Next button */
+  .nextButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 30px;
+    background: #b72d2f;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .totalstep3Text{
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+  }
+  .totalstep3Text span{
+    color: red;
+  }
+  /* Labels */
+  .timePromoPopup h2,
+  .timePromoPopup h3 {
+    font-size: 18px;
+    color: #000;
+    margin: 15px 0 5px;
+    font-weight: bold;
+  }
+  
+  .popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .popup1 h2 {
+    position: absolute;
+    bottom: 79px;
+    font-family: "pop", sans-serif;
+    left: 64px;
+   
+  }
+  
+  .popupButton1 {
+    background: #b72d2f;
+    color: white;
+    border: none;
+    font-family: "pop", sans-serif;
+    font-size: 24px;
+    padding: 15px 80px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: block;
+    width: 200px;
+    margin-left: 212px;
+    margin-top: 87px;
+    text-transform: uppercase;
+  }
+  
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+
+    gap: 5rem; /* Increased gap between sections */
+    margin: 0px -40px; /* Center the container */
+    width: 100%;
+    max-width: 1200px; /* Control maximum width */
+}
+
+
+
+/* PlayStation 3 Section */
+.nonVipSection {
+  margin-bottom: 2rem;
+}
+
+/* PlayStation 4 Section */
+.playstation4 {
+  margin-bottom: 2rem;
+}
+
+/* PlayStation 5 (VIP) Section */
+.vipSection {
+  margin-left: auto;
+  position: absolute;
+  right: 150px;
+  top: 120px;
+}
+
+.playstation3, .playstation4, .vipSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nonVipGrid, .vipGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Adjust legend position */
+.legend {
+  position: absolute;
+  right: 50px;
+  top: 500px;
+  line-height: 65px;
+  gap: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gridContainer {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+  }
+
+  .vipSection {
+      position: static;
+      margin-left: 0;
+  }
+
+  .legend {
+      position: static;
+      margin: 2rem auto;
+  }
+}

@@ -47,6 +47,10 @@ export const routes: RouteDefinition[] = [
     component: lazy(() => import('./users/booking/bookingwarnet')),
   },
   {
+    path: '/PS',
+    component: lazy(() => import('./users/booking/bookingps')),
+  },
+  {
     path: '/register',
     component: lazy(() => import('./users/Register')),
   },
